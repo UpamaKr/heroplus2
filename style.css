@@ -9,6 +9,30 @@ html {
   font-size: 62.5%;
 }
 
+/*  */
+/* NAVIGATION */
+.main-nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: skyblue;
+}
+
 .container {
   margin: 0 auto;
   width: 1200px;
@@ -80,6 +104,22 @@ h2 {
 section {
   padding: 96px 0;
   background-color: #f7f7f7;
+}
+
+/* ************************MOBile */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #fff;
+}
+.icon-mobile-nav[name="menu-outline"] {
+  display: none;
 }
 
 /* *************************************** */
@@ -155,12 +195,39 @@ section {
   .header-container {
     max-width: 55rem;
   }
+
   .container {
     width: 55rem;
   }
   .header-container-inner {
     width: 100%;
     text-align: center;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+  }
+  .header-container {
+  }
+  .main-nav {
+    background-color: rgba(154, 205, 50, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+    color: initial;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
   }
 }
 
